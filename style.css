@@ -1,0 +1,185 @@
+/* 
+Steiber Zoltán
+szoft I/3/E
+2024-01-19
+ */
+
+
+/*Állítsa be az oldal teljes háttérnek a háttérszínt ( #CCA), a betűszín legyen fekete, 
+  használja a Verdana betűcsaládot */
+body {
+  background-color: #CCA; 
+  color: black;
+  font-family: Verdana;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 0;
+  
+}
+
+/* Alakítsa ki a mintának megfelelően az oldal elrendezését, a tartalom az oldal közepén 
+helyezkedjen el és maximális szélessége 900 képpont legyen */
+#container { 
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  background-color: #F1D977; /* #F1D977 */
+  margin: 0;
+  padding: 0;
+}
+
+#container_head {
+  width: 100%;
+  height: auto;
+}
+
+/* A fejlécbe helyezze a logo.jpg képet, a szupermodell szöveg 1-es szintű címsor, a 
+betűszín fehér legyen, ügyeljen a behúzásokra. */
+h1 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  text-transform: uppercase;
+  color: white;
+}
+
+#container_head img {
+  width: 100%;
+  display: block; /* Kiküszöböli a képek közötti felesleges hézagokat */
+}
+
+#container_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: white;  
+}
+
+/* A menüpontok felsorolásban kapjanak helyet, a háttérszín legyen #C60, a betűszín 
+#CCC, a menüpontokat 1px fehér vonal válasza el egymástól, és egymás mellett 
+helyezkedjenek el, az eltartást ízlésesen (a minta szerint) állítsa be */
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #C60;
+  border: 1px solid white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 1em;
+  text-align: center;
+  border-left: 1px solid white;
+  padding: 1rem .2rem 1rem .6rem;
+}
+
+#first-li {
+  border-left: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #CCC;
+}
+
+ /* A szöveget tartalmazó elem  */
+#container_main_text {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.text {
+  padding-top: .5rem;
+  width: 48%;
+  margin-bottom: 0rem;
+}
+
+/* A „Tartalom1” és „Tartalom2” szöveg 2-es szintű címsor legyen, hátérszín #AA8, 
+betűszín fehér, balról 10px behúzással rendelkezzen. */
+.title {
+  text-indent: 10px;
+  color: white;
+  background-color: #AA8;
+}
+
+/* A bekezdések legyenek sorkizárt igazításúak és másfeles sortávolságúak */
+p {
+  font-size: .8rem;
+  text-align: justify;
+  line-height: 1.5;
+  margin: 0 1%;
+  color: black;
+}
+
+#kep1 {
+  float: left;
+  margin: .5rem 1rem .5rem 0;
+}
+
+#kep2 {
+  float: right;
+  margin: 0 0 .5rem 1rem;
+}
+
+#container_foot {
+  font-size: .8rem;
+  padding-bottom: 2rem;
+  background-color:  #F1D977; /*F1D977*/
+  color:  #C60;
+  text-align: center;
+}
+
+/* -----------------------------------------------
+Responsive: ha 900px -nél kisebb a képernyő átmérő */
+@media only screen and (max-width: 900px) {
+  #container { 
+    width: 100%;
+  }
+
+  #container_main {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-top: 1px solid white;
+    height: 100%;
+  }
+
+  ul li {
+    border: none;
+    border-bottom: 1px solid white;
+    padding: .6rem 3rem;
+  }
+
+  #container_main_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;
+  }
+  
+  .text {
+    padding-top: 0;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  #kep1 {
+    float: right;
+    margin: .5rem 0 .5rem 1rem;
+  }
+  
+  #kep2 {
+    float: left;
+    margin: 0 1rem .5rem 0;
+  }
+}
