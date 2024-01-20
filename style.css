@@ -62,21 +62,24 @@ h1 {
 #CCC, a menüpontokat 1px fehér vonal válasza el egymástól, és egymás mellett 
 helyezkedjenek el, az eltartást ízlésesen (a minta szerint) állítsa be */
 ul {
-  display: flex;
-  width: 100%;
   text-align: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
   background-color: #C60;
-  border: 1px solid white;
-  border-left: none;
+  height: 100%;
+}
+
+.main-menu {
+  display: flex;
+  width: 100%;
 }
 
 ul li {
   width: 100%;
-  font-size: 1em;
-  border-left: 1px solid white;
+  height: 100%;
+  border: 1px solid white;
+  border-right: none;
   padding: 1rem 0.2rem;
 }
 
@@ -144,19 +147,16 @@ Responsive: ha 900px -nél kisebb a képernyő átmérő */
     flex-direction: row;
   }
   
-  ul {
+  .main-menu {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    height: 100%;
-    border: none;
-    border-top: 1px solid white;
+    width: 20%;
   }
 
   ul li {
-    width: 95%;
+    border: none;
     border-bottom: 1px solid white;
-    padding: .6rem 3rem .6rem .3rem;
+    padding: .6rem 1rem .6rem 0rem;
   }
 
   #container_main_text {
