@@ -63,23 +63,21 @@ h1 {
 helyezkedjenek el, az eltartást ízlésesen (a minta szerint) állítsa be */
 ul {
   display: flex;
-  justify-content: space-evenly;
-  background-color: #C60;
-  border: 1px solid white;
+  width: 100%;
+  text-align: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  background-color: #C60;
+  border: 1px solid white;
+  border-left: none;
 }
 
 ul li {
+  width: 100%;
   font-size: 1em;
-  text-align: center;
   border-left: 1px solid white;
-  padding: 1rem .2rem 1rem .6rem;
-}
-
-#first-li {
-  border-left: none;
+  padding: 1rem 0.2rem;
 }
 
 ul li a {
@@ -149,9 +147,10 @@ Responsive: ha 900px -nél kisebb a képernyő átmérő */
   ul {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    border-top: 1px solid white;
+    align-items: center;
+    width: 30%;
     height: 100%;
+    border-top: 1px solid white;
   }
 
   ul li {
