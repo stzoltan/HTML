@@ -147,16 +147,16 @@ Responsive: ha 900px -nél kisebb a képernyő átmérő */
   ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 30%;
+    align-items: flex-start;
     height: 100%;
+    border: none;
     border-top: 1px solid white;
   }
 
   ul li {
-    border: none;
+    width: 95%;
     border-bottom: 1px solid white;
-    padding: .6rem 3rem;
+    padding: .6rem 3rem .6rem .3rem;
   }
 
   #container_main_text {
